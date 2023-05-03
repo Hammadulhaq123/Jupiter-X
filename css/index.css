@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.076);
     height: auto;
     width: 100%;
 }
@@ -72,54 +72,6 @@ body {
     cursor: pointer;
 }
 
-.popups {
-    position: relative;
-}
-
-.feature-popup {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70vh;
-    background-color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.feature-img {
-    width: 50%;
-    height: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-
-.feature {
-    width: 22rem;
-    height: 15rem;
-    position: relative;
-    border-radius: 20px;
-    background-image: linear-gradient(60deg, #181618 2%, #4a4a4a 100%);
-    z-index: 2;
-}
-
-.feature img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 22rem;
-    height: 15rem;
-    z-index: 1;
-    border-radius: 0 0 20px 0;
-}
-
 .header-btn {
     width: 20%;
     height: 100%;
@@ -146,4 +98,143 @@ body {
 .grad-btn:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+
+/* Popups */
+
+.popups {
+    position: relative;
+}
+
+.feature-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: #181618;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.feature-img {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.feature-img:hover {
+    cursor: pointer;
+}
+
+
+
+
+.feature {
+    width: 22rem;
+    height: 13rem;
+    position: relative;
+    border-radius: 20px 0 20px 0;
+    background-image: linear-gradient(60deg, #181618 2%, #4a4a4a 100%);
+    z-index: 2;
+}
+
+.feature::before {
+    content: 'Woo Commerce';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    z-index: 4;
+}
+
+.feature2::before {
+    content: 'Live Page Editor';
+}
+
+.feature3::before {
+    content: '100+ Widgets';
+}
+
+.feature4::before {
+    content: 'Form Builder';
+}
+
+.feature img {
+    position: absolute;
+    bottom: 28px;
+    right: 45px;
+    width: 20rem;
+    height: 13rem;
+    z-index: 1;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+}
+
+.feature img:hover {
+    transform: scale(1.1);
+}
+
+.feature-det {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.det-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    gap: 1rem;
+
+}
+
+.det-col-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 15rem;
+    height: 5rem;
+    padding: 0 1.5rem;
+    text-align: left;
+    background-color: #23222391;
+    border-radius: 20px;
+}
+
+.det-col-item:hover {
+    cursor: pointer;
+    background-color: #3231329e;
+}
+
+.bold-txt {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.med-txt {
+    font-size: 18px;
+    font-weight: 400;
 }
